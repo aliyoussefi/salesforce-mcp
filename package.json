@@ -16,6 +16,10 @@
   ],
   "scripts": { "build": "tsc -p tsconfig.json", "prepare": "npm run build", "start": "node dist/src/main.js", "build:exe": "npm run build && pkg dist/src/main.js --targets node22-win-x64 --output dist/salesforce-mcp.exe", "test": "npm run build && node --test dist/tests/*.test.js" },
   "engines": { "node": ">=20" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliyoussefi/salesforce-mcp.git"
+  },
   "keywords": ["mcp", "salesforce", "oauth"],
   "license": "MIT",
   "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0", "@yao-pkg/pkg": "^6.22.0" }
