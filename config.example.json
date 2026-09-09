@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "example": {
+      "endpoint": "https://example.invalid/mcp",
+      "transport": "streamable-http",
+      "clientId": "replace-with-client-id",
+      "scopes": ["mcp"],
+      "auth": { "issuer": "https://login.example.invalid", "authorizationEndpoint": "https://login.example.invalid/authorize", "tokenEndpoint": "https://login.example.invalid/token" },
+      "tokens": { "file": "~/.mcp-oauth-proxy/tokens.json", "allowPlaintextRefreshToken": false }
+    }
+  }
+}

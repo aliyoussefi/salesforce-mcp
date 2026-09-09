@@ -1,0 +1,22 @@
+{
+  "name": "salesforce-mcp",
+  "version": "0.1.0",
+  "description": "Local stdio Salesforce MCP server backed by the Salesforce MCP endpoint",
+  "type": "module",
+  "main": "dist/src/main.js",
+  "bin": {
+    "salesforce-mcp": "dist/src/main.js"
+  },
+  "files": [
+    "dist/src/",
+    "config.example.json",
+    "README.md",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "scripts": { "build": "tsc -p tsconfig.json", "prepare": "npm run build", "start": "node dist/src/main.js", "build:exe": "npm run build && pkg dist/src/main.js --targets node22-win-x64 --output dist/salesforce-mcp.exe", "test": "npm run build && node --test dist/tests/*.test.js" },
+  "engines": { "node": ">=20" },
+  "keywords": ["mcp", "salesforce", "oauth"],
+  "license": "MIT",
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0", "@yao-pkg/pkg": "^6.22.0" }
+}
